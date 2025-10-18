@@ -43,3 +43,15 @@ next-env.d.ts
 # firebase
 firebase-debug.log
 firestore-debug.log
+
+# Dependencies
+node_modules/
+
+# Firebase
+.firebase/
+firebase-debug.log
+
+# Mac/Windows system files
+.DS_Store
+Thumbs.db
+```    *   This prevents the large `node_modules` folder and private Firebase files from being uploaded to GitHub.git add .
