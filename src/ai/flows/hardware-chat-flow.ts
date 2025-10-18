@@ -1,8 +1,8 @@
 'use server';
 
-import { ai } from '@/ai/genkit';
-import { findProducts, getProducts, getProductsByCategory } from '@/lib/products';
-import { z } from 'zod';
+import {ai} from '@/ai/genkit';
+import {findProducts, getProductsByCategory} from '@/lib/products';
+import {z} from 'zod';
 
 const productSchema = z.object({
   id: z.string(),
@@ -17,10 +17,20 @@ const productSchema = z.object({
 const hardwareChatTool = ai.defineTool(
   {
     name: 'hardwareChat',
-    description: 'Use this tool to answer user questions about computer hardware. You can search for products, filter by category, and provide details. All prices are in Indian Rupees (₹).',
+    description:
+      'Use this tool to answer user questions about computer hardware. You can search for products, filter by category, and provide details. All prices are in Indian Rupees (₹).',
     inputSchema: z.object({
-      query: z.string().describe('The user\'s request, e.g., "Find me a GPU" or "best gaming CPU"'),
-      category: z.string().optional().describe('Filter products by category (e.g., CPU, GPU, RAM, Motherboard, SSD, Cooler)'),
+      query: z
+        .string()
+        .describe(
+          'The user\'s request, e.g., "Find me a GPU" or "best gaming CPU"'
+        ),
+      category: z
+        .string()
+        .optional()
+        .describe(
+          'Filter products by category (e.g., CPU, GPU, RAM, Motherboard, SSD, Cooler)'
+        ),
     }),
     outputSchema: z.array(productSchema),
   },
@@ -46,32 +56,14 @@ const hardwareChatFlow = ai.defineFlow(
       - The user is looking for components in the ₹20,000–₹50,000 price range, unless they specify otherwise.
       - Be friendly, helpful, and concise.
       - When providing product suggestions, list the product name and price.
+      - Do not make up products or prices. Use the tool to find real products.
 
       User question: ${prompt}`,
       tools: [hardwareChatTool],
-      model: 'googleai/gemini-2.5-flash',
+      model: 'googleai/gemini-pro',
     });
 
-    const toolCalls = llmResponse.toolCalls();
-    if (toolCalls.length > 0) {
-      const toolResults = await Promise.all(
-        toolCalls.map(async (call) => {
-          const toolResponse = await call.run();
-          return {
-            call,
-            result: toolResponse,
-          };
-        })
-      );
-      
-      const followUp = await ai.generate({
-        prompt: `Here is the user's question: ${prompt}. Here is the data you requested: ${JSON.stringify(toolResults.map(r => r.result))}. Now, please provide a final, user-facing response.`,
-        model: 'googleai/gemini-2.5-flash',
-      });
-      return followUp.text;
-    }
-
-    return llmResponse.text;
+    return llmResponse.text();
   }
 );
 
