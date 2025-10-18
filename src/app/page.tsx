@@ -13,23 +13,12 @@ export default async function Home() {
 
   return (
     <>
-      <section className="relative flex h-screen w-full items-center justify-center">
-        {heroImage && (
-          <Image
-            src={heroImage.imageUrl}
-            alt={heroImage.description}
-            data-ai-hint={heroImage.imageHint}
-            fill
-            className="object-cover"
-            priority
-          />
-        )}
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 max-w-4xl text-center text-primary-foreground">
+      <section className="relative flex h-screen w-full items-center justify-center bg-background">
+        <div className="relative z-10 max-w-4xl text-center text-foreground">
           <h1 className="font-headline text-5xl font-bold uppercase tracking-wider md:text-7xl lg:text-8xl">
             Welcome to Redpan
           </h1>
-          <p className="mt-4 text-lg text-neutral-300 md:text-xl">
+          <p className="mt-4 text-lg text-muted-foreground md:text-xl">
             Cutting-edge hardware for the modern innovator.
           </p>
           <Button asChild size="lg" className="mt-8 font-bold">
