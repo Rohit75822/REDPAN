@@ -46,14 +46,15 @@ export default function Header() {
       className={cn(
         'sticky top-0 z-50 w-full transition-all duration-300',
         headerVisible ? 'translate-y-0' : '-translate-y-full',
-        isScrolled ? 'bg-background/80 shadow-lg backdrop-blur-sm' : 'bg-background'
+        isScrolled ? 'bg-background/80 shadow-lg backdrop-blur-sm' : 'bg-transparent'
       )}
     >
       <div className="container flex h-20 items-center justify-between">
         <a href="#" className="flex items-center gap-2 text-primary">
           <RedpanLogo className="h-8 w-8" />
           <span className={cn(
-              "font-headline text-2xl font-bold uppercase tracking-wider text-primary"
+              "font-headline text-2xl font-bold uppercase tracking-wider",
+              isScrolled ? "text-primary" : "text-primary-foreground"
             )}>
             Redpan
           </span>
@@ -65,7 +66,8 @@ export default function Header() {
               key={link.name}
               href={link.href}
               className={cn(
-                "font-medium transition-colors text-foreground"
+                "font-medium transition-colors",
+                isScrolled ? "text-foreground" : "text-primary-foreground"
               )}
             >
               {link.name}
@@ -75,7 +77,7 @@ export default function Header() {
 
         <div className="flex items-center gap-4">
           <div className="relative">
-            <ShoppingCart className={cn("h-6 w-6 text-foreground")} />
+            <ShoppingCart className={cn("h-6 w-6", isScrolled ? "text-foreground" : "text-primary-foreground")} />
             <span className="absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">
               {cartCount}
             </span>
@@ -85,7 +87,7 @@ export default function Header() {
             <Sheet>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
-                  <Menu className={cn("h-6 w-6 text-foreground")} />
+                  <Menu className={cn("h-6 w-6", isScrolled ? "text-foreground" : "text-primary-foreground")} />
                   <span className="sr-only">Open menu</span>
                 </Button>
               </SheetTrigger>

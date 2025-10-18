@@ -24,13 +24,13 @@ export default async function Home() {
             priority
           />
         )}
-        <div className="absolute inset-0 z-0 bg-black/50" />
+        <div className="absolute inset-0 z-0 bg-black/60" />
         <div className="relative z-10 max-w-4xl text-center text-primary-foreground">
           <h1 className="font-headline text-5xl font-bold uppercase tracking-wider md:text-7xl lg:text-8xl">
             Welcome to Redpan
           </h1>
           <p className="mt-4 text-lg md:text-xl">
-            Cutting-edge hardware for the modern innovator.
+            Welcome to our website! We’re passionate about creating innovative and responsive web designs that bring ideas to life. Explore our projects, learn more about our work, and connect with us to collaborate.
           </p>
           <Button asChild size="lg" className="mt-8 font-bold">
             <a href="#products">Shop Now</a>
