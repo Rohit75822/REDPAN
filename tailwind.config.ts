@@ -17,8 +17,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['"Comic Relief"', 'cursive'],
-        headline: ['"Comic Relief"', 'cursive'],
+        body: ['"DM Serif Text"', 'serif'],
+        headline: ['"DM Serif Text"', 'serif'],
         code: ['monospace'],
       },
       colors: {
