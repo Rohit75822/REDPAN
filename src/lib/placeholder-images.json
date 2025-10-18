@@ -1,3 +1,52 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "A dark, abstract, and technical background with red glowing lines, representing computer hardware circuitry.",
+      "imageUrl": "https://images.unsplash.com/photo-1497961621566-ee46d8b8549c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMGhhcmR3YXJlfGVufDB8fHx8MTc2MDc4ODQ4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract hardware"
+    },
+    {
+      "id": "about-image",
+      "description": "A modern and clean workshop or lab where hardware is being assembled or tested.",
+      "imageUrl": "https://images.unsplash.com/photo-1581092916357-5896ebc48073?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0ZWNoJTIwd29ya3Nob3B8ZW58MHx8fHwxNzYwNzgwMjU5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tech workshop"
+    },
+    {
+      "id": "product-1",
+      "description": "A sleek, powerful CPU with glowing red highlights on a dark background.",
+      "imageUrl": "https://images.unsplash.com/photo-1670751782084-dffc982dc63b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjcHUlMjBwcm9jZXNzb3J8ZW58MHx8fHwxNzYwNzYwMjk0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cpu processor"
+    },
+    {
+      "id": "product-2",
+      "description": "A high-performance graphics card with a futuristic design and red LED accents.",
+      "imageUrl": "https://images.unsplash.com/photo-1555618568-bdf0a992c512?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxncmFwaGljcyUyMGNhcmR8ZW58MHx8fHwxNzYwNzQyOTU2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "graphics card"
+    },
+    {
+      "id": "product-3",
+      "description": "A motherboard with intricate circuits and red heat sinks, shown at an angle.",
+      "imageUrl": "https://images.unsplash.com/photo-1687468047998-75435bdfd132?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb21wdXRlciUyMG1vdGhlcmJvYXJkfGVufDB8fHx8MTc2MDc1OTA2NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "computer motherboard"
+    },
+    {
+      "id": "product-4",
+      "description": "A set of RAM modules with red heat spreaders, arranged neatly.",
+      "imageUrl": "https://images.unsplash.com/photo-1666868213704-1677b7f04c30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxyYW0lMjBtZW1vcnl8ZW58MHx8fHwxNzYwNzYwMjkzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ram memory"
+    },
+    {
+      "id": "product-5",
+      "description": "A fast solid-state drive (SSD) with red branding.",
+      "imageUrl": "https://images.unsplash.com/photo-1709660850064-0ec82e1a6b5d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzc2QlMjBkcml2ZXxlbnwwfHx8fDE3NjA3NjAyOTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ssd drive"
+    },
+    {
+      "id": "product-6",
+      "description": "A liquid cooling system for a CPU with red tubing and coolant.",
+      "imageUrl": "https://images.unsplash.com/photo-1755625655242-c1e0721c1ab6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxsaXF1aWQlMjBjb29sZXJ8ZW58MHx8fHwxNzYwNzg4NDgzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "liquid cooler"
+    }
+  ]
 }
