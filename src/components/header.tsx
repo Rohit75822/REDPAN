@@ -13,6 +13,7 @@ const navLinks = [
   { name: 'Products', href: '#products' },
   { name: 'About', href: '#about' },
   { name: 'Testimonials', href: '#testimonials' },
+  { name: 'Chatbot', href: '#chatbot' },
   { name: 'Contact', href: '#contact' },
 ];
 
@@ -20,12 +21,10 @@ export default function Header() {
   const { cartCount } = useCart();
   const [lastScrollY, setLastScrollY] = useState(0);
   const [headerVisible, setHeaderVisible] = useState(true);
-  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      setIsScrolled(currentScrollY > 10);
       if (currentScrollY > lastScrollY && currentScrollY > 80) { // scrolling down
         setHeaderVisible(false);
       } else { // scrolling up
@@ -44,7 +43,7 @@ export default function Header() {
   return (
     <header
       className={cn(
-        'sticky top-0 z-50 w-full bg-background/80 shadow-lg backdrop-blur-sm transition-transform duration-300',
+        'sticky top-0 z-50 w-full bg-card shadow-lg transition-transform duration-300',
         headerVisible ? 'translate-y-0' : '-translate-y-full'
       )}
     >

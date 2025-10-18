@@ -5,6 +5,7 @@ import ProductGrid from '@/components/product-grid';
 import placeholderImages from '@/lib/placeholder-images.json';
 import ContactForm from '@/components/contact-form';
 import Testimonials from '@/components/testimonials';
+import Chatbot from '@/components/chatbot';
 
 export default async function Home() {
   const products = await getProducts();
@@ -79,6 +80,15 @@ export default async function Home() {
       </section>
 
       <Testimonials />
+
+      <section id="chatbot" className="py-16 sm:py-24 bg-background">
+        <div className="container">
+          <h2 className="mb-12 text-center font-headline text-4xl font-bold uppercase tracking-wider md:text-5xl">
+            Hardware Chatbot
+          </h2>
+          <Chatbot />
+        </div>
+      </section>
 
       <section id="contact" className="py-16 sm:py-24">
         <div className="container max-w-2xl">
