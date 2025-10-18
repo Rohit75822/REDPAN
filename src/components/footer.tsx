@@ -18,9 +18,14 @@ export default function Footer() {
               Redpan
             </span>
           </div>
-          <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Redpan. All rights reserved.
-          </p>
+          <div className="flex flex-col items-center gap-2">
+            <p className="text-sm text-muted-foreground">
+              &copy; {new Date().getFullYear()} Redpan. All rights reserved.
+            </p>
+            <p className="text-xs text-muted-foreground/80">
+              website build by 11 verse
+            </p>
+          </div>
           <div className="flex items-center gap-4">
             {socialLinks.map((link) => (
               <a
