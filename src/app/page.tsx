@@ -4,6 +4,7 @@ import { getProducts } from '@/lib/products';
 import ProductGrid from '@/components/product-grid';
 import placeholderImages from '@/lib/placeholder-images.json';
 import ContactForm from '@/components/contact-form';
+import Testimonials from '@/components/testimonials';
 
 export default async function Home() {
   const products = await getProducts();
@@ -76,6 +77,8 @@ export default async function Home() {
           </div>
         </div>
       </section>
+
+      <Testimonials />
 
       <section id="contact" className="py-16 sm:py-24">
         <div className="container max-w-2xl">
